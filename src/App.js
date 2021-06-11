@@ -3,12 +3,17 @@ import { Container } from 'semantic-ui-react';
 
 import 'semantic-ui-css/semantic.min.css';
 import Navi from './layout/Navi';
+import EmployersList from './pages/EmployersList';
+import Dashboard from './layout/Dashboard';
 
 
 function App() {
   return (
     <div className="App">
       <Navi/>
+      <Container className="main">
+     <Dashboard/>
+     </Container>
     </div>
   );
 }
