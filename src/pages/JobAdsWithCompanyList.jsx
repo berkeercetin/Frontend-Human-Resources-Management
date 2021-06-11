@@ -3,7 +3,7 @@ import React, { useState,useEffect } from 'react'
 import { Table,Menu,Icon} from 'semantic-ui-react'
 import JobAdvertisementsService from '../services/jobAdvertisementsService'
 
-export default function JobAdsWithCompany() {
+export default function JobAdsWithCompanyList() {
     const [jobAdsWithCompanys, setJobAdsWithCompany] = useState([])
 
     useEffect(() => {
