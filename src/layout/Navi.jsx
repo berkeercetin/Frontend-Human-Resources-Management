@@ -1,7 +1,8 @@
 import React,{useState} from 'react'
 import { useHistory } from 'react-router'
 import { Menu,Button,Container} from 'semantic-ui-react'
-import UserMenu from './UserMenu'
+import SignedIn from './SignedIn'
+import SignOut from './SignedOut'
 
 export default function Navi() {
 
@@ -39,13 +40,9 @@ export default function Navi() {
         />
 
         <Menu.Item position = "right">          
-        <Button primary>Kayıt ol</Button>
+        {isAuthenticated? <SignedIn signOut={handleSignOut} bisey="1"/>:<SignOut signIn={handleSignIn}/>}
           </Menu.Item>
-
-          <Menu.Item>          
-          <Button>Giriş</Button>
-          </Menu.Item>
-
+      
 
         </Container>
       </Menu>
