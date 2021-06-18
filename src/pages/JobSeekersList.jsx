@@ -2,6 +2,7 @@
 import React, { useState,useEffect } from 'react'
 import JobSeekerService from '../services/jobSeekerService'
 import { Table,Menu,Icon} from 'semantic-ui-react'
+import { Link } from 'react-router-dom'
 
 
 export default function JobSeekersList() {
@@ -22,17 +23,17 @@ export default function JobSeekersList() {
                     <Table.Row>
                         <Table.HeaderCell>Adı</Table.HeaderCell>
                         <Table.HeaderCell>Soyadı</Table.HeaderCell>
-                        <Table.HeaderCell>Doğumgünü</Table.HeaderCell>
+                        <Table.HeaderCell>Arayış Alanı</Table.HeaderCell>
                     </Table.Row>
                 </Table.Header>
 
                 <Table.Body>
                     {
                         jobSeekers.map(jobSeeker => (<Table.Row key={jobSeeker.id}>
-                            <Table.Cell>{jobSeeker.firstName}</Table.Cell>
+                            <Table.Cell><Link to ={`/jobseekers/${jobSeeker.firstName}`}>{jobSeeker.firstName}</Link></Table.Cell>
                             <Table.Cell>{jobSeeker.lastName}</Table.Cell>
                             <Table.Cell>
-                                {jobSeeker.birthDate}
+                                {jobSeeker.curriculumVitae?.jobSeekerTechnology?.technologyName}
             </Table.Cell>
                         </Table.Row>))
 

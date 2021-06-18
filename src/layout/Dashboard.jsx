@@ -1,6 +1,7 @@
 import React from 'react'
 import { Route } from 'react-router-dom'
 import { Grid, GridColumn, GridRow } from 'semantic-ui-react'
+import AddJobAdvertisement from '../pages/AddJobAdvertisement'
 import EmployersList from '../pages/EmployersList'
 import JobAdsActivatedAllsList from '../pages/JobAdsActivatedAllsList'
 import JobSeekersList from '../pages/JobSeekersList'
@@ -18,10 +19,12 @@ export default function Dashboard() {
 
                     <GridColumn width={12}>
                    </GridColumn>
-                    <Route  path="/employers" component={EmployersList} />
-                    <Route  path="/jobseekers" component={JobSeekersList} />
-                    <Route  path="/jobs" component={JobsList} />
-                    <Route  path="/jobads" component={JobAdsActivatedAllsList} />
+                    <Route  exact path="/employers" component={EmployersList} />
+                    <Route  exact path="/jobseekers" component={JobSeekersList} />
+                    <Route  exact path="/jobs" component={JobsList} />
+                    <Route  exact path="/" component={JobAdsActivatedAllsList} />
+                    <Route  exact path="/addjobads" component={AddJobAdvertisement} />
+                   
                 </GridRow>
 
 

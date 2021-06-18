@@ -3,10 +3,11 @@ import { Menu } from 'semantic-ui-react'
 
 
 export default function SideBar() {
+
     return (
         <div>
             <Menu pointing vertical>
-                <Menu.Item
+                <Menu.Item onClick
                     name='Şehir'
                    
                 />

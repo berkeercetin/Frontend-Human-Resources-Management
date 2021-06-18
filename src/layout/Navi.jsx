@@ -1,6 +1,8 @@
 import React,{useState} from 'react'
 import { useHistory } from 'react-router'
+import { Redirect } from 'react-router-dom'
 import { Menu,Button,Container} from 'semantic-ui-react'
+import JobsList from '../pages/JobsList'
 import SignedIn from './SignedIn'
 import SignOut from './SignedOut'
 
@@ -19,21 +21,36 @@ export default function Navi() {
       
   }
 
+  function handleRouteMain(params){
+    history.push("/")
+  }
+
+  function handleRoutCompany(params){
+    history.push("/employers")
+  }
+
+
+  function handleRouteSeeker(params){
+    history.push("/jobseekers")
+  }
+
+  
+
 
 
   return (
     <div>
        <Menu >
        <Container>
-        <Menu.Item
+        <Menu.Item onClick={handleRouteMain}
           name='Anasayfa'
           
         />
-        <Menu.Item
+        <Menu.Item onClick={handleRoutCompany}
           name='Firmalar'
           
         />
-        <Menu.Item
+        <Menu.Item onClick={handleRouteSeeker}
           name='Adaylar'
 
         
