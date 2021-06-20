@@ -1,5 +1,4 @@
 import { useFormik } from 'formik'
-import React, { useEffect, useState } from 'react'
 import * as Yup from "yup";
 import { Form, Message, Button } from 'semantic-ui-react';
 import JobAdvertisementsService from '../services/jobAdvertisementsService';
@@ -8,16 +7,13 @@ import JobAdvertisementsService from '../services/jobAdvertisementsService';
 
 export default function AddJobAdvertisement() {
 
-    let jobAdvertService = new JobAdvertisementsService();
     const {
         values,
         errors,
         handleChange,
         handleSubmit,
-        handleReset,
         handleBlur,
-        dirty,
-        isSubmitting,
+        
         touched,
 
     } = useFormik({
