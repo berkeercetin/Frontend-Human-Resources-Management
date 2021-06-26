@@ -1,8 +1,6 @@
 import React,{useState} from 'react'
 import { useHistory } from 'react-router'
-import { Redirect } from 'react-router-dom'
-import { Menu,Button,Container} from 'semantic-ui-react'
-import JobsList from '../pages/JobsList'
+import { Menu,Container} from 'semantic-ui-react'
 import SignedIn from './SignedIn'
 import SignOut from './SignedOut'
 
